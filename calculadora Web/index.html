@@ -1,0 +1,49 @@
+<!-- Teste de calculadora registradora de combustivel web, por enquanto sem detalhes visuais pois 
+é apenas um teste -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posto de Combustível</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Posto de Combustível</h1>
+
+        <!-- Formulário para registrar vendas -->
+        <form id="vendaForm">
+            <label for="combustivel">Escolha o combustível:</label>
+            <select id="combustivel">
+                <option value="Gasolina Comum">Gasolina Comum - R$5.50</option>
+                <option value="Gasolina Aditivada">Gasolina Aditivada - R$6.00</option>
+                <option value="Etanol">Etanol - R$4.00</option>
+                <option value="Diesel">Diesel - R$4.50</option>
+            </select>
+
+            <label for="litros">Litros:</label>
+            <input type="number" id="litros" step="0.01" placeholder="Digite a quantidade de litros" required>
+
+            <label for="pagamento">Método de Pagamento:</label>
+            <select id="pagamento">
+                <option value="Dinheiro">Dinheiro</option>
+                <option value="Pix">Pix</option>
+                <option value="Cartão">Cartão</option>
+            </select>
+
+            <button type="submit">Registrar Venda</button>
+        </form>
+
+        <!-- Exibição das vendas -->
+        <h2>Vendas Registradas</h2>
+        <div id="vendasContainer">
+            <p id="semVendas">Nenhuma venda registrada.</p>
+            <ul id="listaVendas"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
